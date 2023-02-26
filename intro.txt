@@ -1,0 +1,11 @@
+# Course Structure
+  1. Jest and React testing library
+  2. Fundamentals of writing a test in React app
+  3. Test components with user interactions
+  4. Test components wrapped in a provider
+  5. Test components with mocking like API mocking
+  6. Static analysis testing
+  
+  Prerequisites:
+  1. React fundamentals
+  2. Typescript fundamentals
