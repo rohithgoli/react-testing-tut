@@ -24,3 +24,18 @@
     + it is possible to use .skip, .only with describe method
     + is is possible to nest describe blocks
     + there can be multiple describe blocks
+
+
+# File name conventions that create-react-app follows wrt jest
+    + with CRA , jest will look up for any of the following naming conventions for test files
+        + Filename Conventions
+            + Files with .test.js or .test.tsx suffix
+            + Files with .spec.js or .spec.tsx suffix
+            + Files with .js or .tsx suffix in __tests__ folders
+
+            Recommendation is to always put your tests next to the code
+            they are testing so that relative imports are shorter.
+
+    + with jest we can use either test method or global it method
+        While using "it", to replicate .only we can use "fit"
+        to replace .skip we can use "xit"

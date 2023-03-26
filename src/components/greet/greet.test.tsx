@@ -17,7 +17,7 @@ import {Greet} from './greet'
 
 
 describe('Greet', () => {
-    test('renders correctly', () => {
+    it('renders correctly', () => {
         render(<Greet />)
         const textElement = screen.getByText('Hello')
         expect(textElement).toBeInTheDocument()
