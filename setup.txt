@@ -1,0 +1,5 @@
+1. Make sure you have node and git installed by checking node --version
+    & git --version respectively
+
+2. npx create-react-app . --template typescript
+    to have a setup
