@@ -1,0 +1,14 @@
+# Assertions
+    + When writing tests, we often need to check that values meet certain conditions
+    + Assertions decide if a test pass or fails
+    + with jest, assertions are carried out with global "expect" method
+        expect method needs a value as an argument
+            The argument should be the value that our code produces
+    + Typically, you will use expect along with a "matcher" function to assert something
+        about a value
+    + A matcher can optionally accept an argument which is the correct expected value 
+        + What are different matcher functions to use while writing a test ?
+            jestjs.io/docs/using-matchers
+            Refer jestDOM Custom matchers
+
+        + setupTests is a file which is globally executed before jest runs tests
