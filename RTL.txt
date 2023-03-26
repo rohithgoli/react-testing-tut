@@ -93,4 +93,12 @@
 
     + getByRole must be the top preference among Queries
 
-    
+
+
+    ****** getByLabelText ******
+
+    + getByLabelText will search for the label that matches the given text, then find the 
+        element associated with that label
+    + options for getByLabelText
+        eg: two elements have same label, in such case we pass options object with selector key whose value is 
+            html element
