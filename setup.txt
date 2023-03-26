@@ -3,3 +3,27 @@
 
 2. npx create-react-app . --template typescript
     to have a setup
+
+
+# Running tests
+    + create-react-app also provides a sample test in a test file 
+        and scripts to run test in application
+    + when we run that script, jest finds the tests, runs it & prints the result
+
+
+# Structure or Anatomy of the test present in app.test.tsx
+
+    + test method --> it runs a test
+        + test accepts 3 arguments
+            test(name, fn, timeout)
+                The first argument is the test name used to identify the test
+                The second argument is a function that contains the expectations to test
+                    + this is where RTL comes into picture
+                        Begin by creating a virtual DOM of the App Component using the render method
+                        from RTL
+                        screen , an object in RTL, which contains the methods to query to virtual DOM
+                    + test, expect are methods from jest
+
+                The third argument is timeout which is an optional argument for specifying how
+                    long to wait before aborting the test. The default timeout value is 5 seconds.
+
