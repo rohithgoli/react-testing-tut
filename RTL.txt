@@ -46,3 +46,51 @@
     + getBy.. class of queries return the matching node for a query, and
         throw a descriptive error if no elements match or
         if more than one match is found.
+
+    + The suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue,
+        AltText, Title and finally TestId
+
+    ****** getByRole ******
+
+    + getByRole queries for elements with the given role
+        + Role --> refers to the ARIA (Accessible Rich Internet Application) role which provides
+            semantic meaning to content to ensure people using assistive technologies are able to
+            use them 
+
+        + By default, many semantic elements in HTML have a role
+            Button element has a button role, 
+            anchor element has a link role, 
+            h1 to h6 elements have a heading role,
+            checkboxes have a checkbox role,
+            radio buttons have a radio role and so on
+
+        + If we are working with elements that do not have a default role or
+            if we want to specify a different role, the role attribute can be used to add the desired role.
+
+            eg: To use an anchor element as a button in the navbar, you can add role='button'
+
+        + How do we know the role for each element ?
+            testing-library.com/docs/ --> Core API --> queries --> ByRole --> a table of HTML elements with their default and desired roles
+
+
+    + getByRole options
+
+        + getByRole method provides some options which we can use to tweak the querying logic
+
+        + How do we resolve the issue where we have multiple elements that have the same role ?
+
+            "name" --> The accessible name is for simple cases equal to
+            1. the label of a form element
+            2. the text content of a button or 
+            3. the value of the aria-label attribute
+
+            "level" --> applicable when dealing with headings
+
+            "hidden"
+            "selected"
+            "checked"
+            "pressed"
+
+    + getByRole must be the top preference among Queries
+
+    
