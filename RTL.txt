@@ -102,3 +102,9 @@
     + options for getByLabelText
         eg: two elements have same label, in such case we pass options object with selector key whose value is 
             html element
+
+
+    ****** getByPlaceholderText *****
+
+    + getByPlaceholderText will search for all elements with a placeholder attribute and find one that matches the given text
+    
