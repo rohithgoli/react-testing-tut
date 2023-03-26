@@ -1,0 +1,10 @@
+# Code Coverage
+    + A metric that can help us understand how much of our software code is tested
+        + Statement Coverage
+        + Branches Coverage
+        + Function Coverage
+        + Line Coverage
+
+# How to obtain code Coverage report ?
+# How we can mention to ignore files for jest ?
+# How we can implement minimum threshold for jest so that it will fail if it is not met ?
