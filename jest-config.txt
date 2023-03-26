@@ -1,0 +1,26 @@
+# jest configuration
+
+# watch mode
+    + npm test --> starts jest in watch mode
+    + watch mode is an option that we can pass to Jest asking to watch files
+        that have changed since the last commit and execute tests related only
+        to those changed files
+    + An optimization designed to make your tests run fast regardless of how many
+        tests you have
+
+# Filtering tests
+    + Apart from command line options, .only , .skip can be used
+
+# Grouping tests
+    + If we prefer our tests to be organised in groups, we can use 
+        describe method
+    + describe accepts two arguments
+        describe(name, fn)
+            first argument --> group name
+            second argument --> a function that contains the 
+                                expectations to test
+
+
+    + it is possible to use .skip, .only with describe method
+    + is is possible to nest describe blocks
+    + there can be multiple describe blocks
