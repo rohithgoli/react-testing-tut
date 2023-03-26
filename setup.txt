@@ -27,3 +27,8 @@
                 The third argument is timeout which is an optional argument for specifying how
                     long to wait before aborting the test. The default timeout value is 5 seconds.
 
+
+# TDD
+    + 1. Create tests that verify the functionality of a specific feature
+      2. Write Software code that will run the tests successfully when re-executed
+      3. Refactor the code for optimization while ensuring the tests continue to pass

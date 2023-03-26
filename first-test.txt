@@ -1,0 +1,3 @@
+# We are going to create a component Greet which renders a text Hello
+    and write a test for it, to ensure the component renders correctly
+    
