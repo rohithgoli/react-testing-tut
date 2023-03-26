@@ -1,3 +1,4 @@
+How to write automated tests for react application ?
 # Course Structure
   1. Jest and React testing library
   2. Fundamentals of writing a test in React app
@@ -6,6 +7,64 @@
   5. Test components with mocking like API mocking
   6. Static analysis testing
   
+Outcome: A fundamental understanding of testing react applications
+          Writing automated tests with Jest and react-testing-library(RTL)
+
   Prerequisites:
   1. React fundamentals
   2. Typescript fundamentals
+
+
+# What is Jest ?
+  + A javascript testing framework
+  + In the context of the series, 
+      Jest is a test runner that finds tests, runs the tests,
+      determines whether the tests passed or failed and 
+      reports it back in a human readable manner
+
+
+# What is react-testing-library ?
+  + a javascript testing utility that provides virtual DOM for testing React components
+  + with the automated tests we are about to write, there is no actual DOM to work with
+      React testing library provides a virtual DOM which we can use to interact with &
+      verify the behaviour of a react component
+
+  + Testing library is infact a family of packages which helps test UI components
+  + The core library is called DOM Testing library & RTL is simply a wrapper around this
+    core library to test React applications in an easier way
+
+
+# Why do we need two libraries while testing react applications ?
+  + Jest & RTL are not alternative to one other. We use both to write our automated tests
+
+
+# Types of Automated tests:
+  + Each type serves a different purpose
+  + Typically we come across 3 types of tests
+    1. Unit tests
+        + Focus is on testing the individual building blocks of an application such as 
+          class or a function or a component
+        + Each unit or building block is tested in isolation, independent of other units
+        + Dependencies are mocked
+        + Run in a short amount of time and make it very easy to pinpoint failures
+        + Relatively easier to write & maintain
+
+    2. Integration tests
+        + Focus is on testing a combination of units and ensuring they work together
+        + Take longer than unit tests
+
+    3. E2E tests
+        + Focus is on testing the entire application flow & ensuring it works as designed
+          from start to finish
+        + Involves in a real UI, a real backend database, real services etc.
+
+
+NOTE: with React Testing Library, we are not concerned about the implementation details of a 
+      component
+      Instead we are testing how the component behaves when a user interacts with it
+
+      Thus, Refactoring will not affect your test as long as the end result is the same
+
+
+# What is a test ?
+    A piece of code which throws an error when actual output does not match the expected output
