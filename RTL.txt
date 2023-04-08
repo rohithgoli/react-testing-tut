@@ -50,7 +50,7 @@
     + The suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue,
         AltText, Title and finally TestId
 
-    ****** getByRole ******
+    (1) ****** getByRole ******
 
     + getByRole queries for elements with the given role
         + Role --> refers to the ARIA (Accessible Rich Internet Application) role which provides
@@ -95,7 +95,7 @@
 
 
 
-    ****** getByLabelText ******
+    (2) ****** getByLabelText ******
 
     + getByLabelText will search for the label that matches the given text, then find the 
         element associated with that label
@@ -104,13 +104,57 @@
             html element
 
 
-    ****** getByPlaceholderText *****
+    (3) ****** getByPlaceholderText *****
 
     + getByPlaceholderText will search for all elements with a placeholder attribute and find one that matches the given text
 
 
-    ****** getByText ******
+    (4) ****** getByText ******
 
     + getByText will search for all elements that have a text node with textContent matching the given text
     + Typically, we would use this to find paragraph, div or span elements
     + It provides selector as an Option
+
+
+    (5) ****** getByDisplayValue *****
+
+    + returns the input, textarea, or select element that has the matching display value
+    + we will use this typically for form controls based on their value
+
+
+    (6) ***** getByAltText *****
+
+    + return the element that has the given alt text
+    + this method only supports element which accept an alt attribute like <img>, <input>, <area> or custom HTML elements
+
+
+    (7) ***** getByTitle *****
+
+    + getByTitle returns the element that has the matching title attribute
+    
+
+    (8) ***** getByTestId *****
+
+    + returns the element that has the matching data-testid attribute
+
+
+# Priority Order for Queries
+
+    + we have gone through different Query methods RTL offers to find an element in the dom
+    + The order of priority for using queries is based on the principle
+        "Your test should resemble how users interact with your code (component, page, etc.) as much as possible"
+
+    + Order of priority is as follows:
+        1. getByRole
+        2. getByLabelText --> very good for form-fields
+        3. getByPlaceholderText
+        4. getByText --> outside forms, we may use it
+        5. getByDisplayValue --> The current value of a form may be useful while navigating a page
+                                    with filled-in values & this query helps us
+
+            Above methods will be enough , if not then below
+        6. getByAltText
+        7. getByTitle
+
+            Last resort
+        8. getByTestId --> when text is dynamic
