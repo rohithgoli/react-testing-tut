@@ -1,0 +1,48 @@
+# Testing User Interactions
+
+    + A click using mouse or a keypress using keyboard
+    + Software has to respond to such Interactions
+    + Tests should ensure the interactions are handled as expected
+
+    + To test user interactions, we can use a library called user-event
+        which is a companion library for testing library that simulates user interactions
+        by dispatching the events that would happen if the interaction took place in a
+        browser
+
+        It is the recommended way to test user interactions with RTL
+
++ fireEvent vs user-event
+    + fireEvent is a method from RTL which is used to dispatch DOM events
+
+    + user-event simulates full interactions, which may fire multiple events and do additional
+        checks along the way
+
+        For example, we can dispatch the change event on an input field using fireEvent
+
+    + When a user types into a text box, the element has to be focused, and then keyboard and input
+        events are fired and the selection and value on the element are manipulated as they type
+    
+    + user-event allows you to describe a user interactions instead of a concrete event. It adds visibility
+        intractability checks along the way and manipulates the DOM just like a user interaction in the browser
+        would. 
+            It factors in that the browser eg. wouldn't let a user click a hidden element or type in a disabled text box
+
+
+# Pointer Interactions - Mouse Interactions
+    + All the user-event APIs are Asynchronous
+    + Create an instance of user before render using user.setup()
+    + Convenience APIs
+        click() -> which inturn calls Pointer APIs
+        //ly 
+        dblClick()
+        tripleClick()
+        hover()
+        unhover()
+    + While writing tests, we use mostly Convenience APIs
+    + Pointer APIs
+        pointer({keys: '[MouseLeft]'})
+        pointer({keys: '[MouseLeft][Mouseright]'})
+        pointer('[MouseLeft][Mouseright]')
+        pointer('[MouseLeft>]') --> In order to press a button without releasing It
+        pointer('[/MouseLeft]') --> In order to release a previously pressed button
+    + Always better to rely on Convenience APIs
