@@ -1,0 +1,19 @@
+# Manual Queries
+
+RTL Queries
+    + getBy & getAllBy
+    + queryBy & queryAllBy
+    + findBy & findAllBy
+
++ We can use the regular querySelector DOM API to find elements
+    eg:
+        const {container} = render(<MyComponent/>)
+        const foo = container.querySelector('[data-foo="bar"]')
+
+# Debugging
+    + screen.debug()
+    + logRoles()
+
+# Testing Playground
+    + chrome extension useful for beginners that helps to find the best queries
+        to select elements when working with testing library
