@@ -2,5 +2,8 @@
     + Mocking functions with jest
         mock functions allow us to test our code without worrying about actual
             implementation of the function
+
     + Mocking HTTP requests
+        + For mocking, when writing tests with RTL, mock service worker is the preferred package (mswjs.io)
+        + msw is an API mocking library, that uses service worker library to intercept the actual requests
 
