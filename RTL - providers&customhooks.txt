@@ -10,3 +10,14 @@
         This wraps the component with provider before rendering
 
     + There also exists a way to specify the wrapper option once for every test in the App
+
+# Custom Render Functions
+
+    + context provider wraps only a few components
+    + However, for a theme provider (or) redux store provider, 
+        it makes sense to add wrapper at top-level & available for every component
+        resulting in not to specify the wrapper option at every test
+
+    + A way to acheive a single wrapper across all tests, is by writing Custom Render Function
+
+    + testing-library.com --> docs --> Frameworks --> React Testing Library --> Setup --> Custom Render
