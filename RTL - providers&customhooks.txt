@@ -1,0 +1,12 @@
+# How to test component wrapped in a provider ?
+# How to test custom hooks ?
+
+# How to test component wrapped in a provider ?
+
+    Goal: To test MuiMode component
+
+    + RTL providers a wrapper option while rendering
+        So on the render function, add a second argument, an object,
+        This wraps the component with provider before rendering
+
+    + There also exists a way to specify the wrapper option once for every test in the App

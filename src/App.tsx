@@ -1,12 +1,14 @@
-import React from 'react';
 import './App.css';
-import { Application } from './components/application/application';
+import { AppProviders } from "./providers/app-providers";
+import { MuiMode } from "./components/mui/mui-mode";
 
 function App() {
   return (
-    <div className="App">
-      <Application />
-    </div>
+    <AppProviders>
+      <div className="App">
+        <MuiMode />
+      </div>
+    </AppProviders>
   );
 }
 
