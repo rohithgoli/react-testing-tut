@@ -7,3 +7,8 @@
         + For mocking, when writing tests with RTL, mock service worker is the preferred package (mswjs.io)
         + msw is an API mocking library, that uses service worker library to intercept the actual requests
 
+
+    + msw (mock service worker) setup
+        + In docs, --> Integrate --> Node --> 
+    + msw handlers
+        + within this file, we are going to handle all HTTP requests, and respond with mock response
