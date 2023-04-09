@@ -21,3 +21,19 @@
     + A way to acheive a single wrapper across all tests, is by writing Custom Render Function
 
     + testing-library.com --> docs --> Frameworks --> React Testing Library --> Setup --> Custom Render
+
+
+# How to test Custom React Hooks with the Testing Library ?
+
+    + For testing custom hooks, we do not rely on render, screen as RTL provides renderHook function
+    + Unlike a regular component which can be asserted using screen, Hooks do not have any DOM elements
+        Instead renderHook will wrap the hook inside function component, invoke the hook, and returns an object
+        from which we can destructure the property called result
+    + On this result, there exists a property called current, which will contain all the return values from the
+        Custom Hook
+
+
+# Act Utility
+    + act is a function that ensures updates are processed before assertions are made
+    + When testing customHooks, code that causes state updates, RTL cannot wrap them inside act function
+        we have to manually import it that causes state updates
