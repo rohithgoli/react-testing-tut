@@ -59,3 +59,18 @@ For this, we add another lint-plugin --> eslint-config-prettier
         npx husky-init && npm install
         A pre-commit file is introduced & whenever we commit, these scripts are run
         If any error is thrown, the commit is aborted
++ Thus devs cannot commit code that has liniting errors and code is formatted before committed
+
+
+# lint-staged
+
++ husky lints and formats the entire codebase, it would be better if same action is taken on
+    files which are about to be committed
++ lint-staged runs linters (and formatters) against staged git files
++ npm install -D lint-staged
++ A good way to make sure that test suite is not breaking is before committing the code to remote branches
+    using pre-push hook
+    for that, npx husky add .husky/pre-push "npm test -- --watchAll=false"
+    Thus, if we try to push the code, all tests will run & only if they pass 
+        the code gets pushed to remote
+        

@@ -63,7 +63,12 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-jest-dom": "^4.0.3",
     "husky": "^8.0.0",
+    "lint-staged": "^13.2.1",
     "msw": "^1.2.1",
     "prettier": "^2.8.7"
+  },
+  "lint-staged": {
+    "*.{ts, tsx}": ["eslint"],
+    "*.{ts, tsx, css, scss}": ["prettier --write"]
   }
 }
