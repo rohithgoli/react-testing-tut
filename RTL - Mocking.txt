@@ -12,3 +12,12 @@
         + In docs, --> Integrate --> Node --> 
     + msw handlers
         + within this file, we are going to handle all HTTP requests, and respond with mock response
+
+
+# How to handle errors when mocking HTTP requests ?
+    
+    + How do we ask mock service worker to respond with error status instead of success status ?
+        + In the test file, within the test function which tests error scenario,
+          we are going to reset the handler we have defined in the main handlers file, to throw an error
+            for that, we need to get hold of server from server.tsx
+        +
