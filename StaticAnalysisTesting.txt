@@ -1,0 +1,61 @@
+# Static Analysis Testing
+
++ Process of verifying that your code meets certain expectations without actually running it.
+    + Ensure consistent style and formatting
+    + Check for common mistakes and possible bugs
+    + Limit the complexity of code and
+    + Verify type consistency
+
++ Static testing analyses aspects such as readability, consistency, error handling,
+    type checking and alignment with best practices
+
++ Testing checks if code works or not, whereas Static Analysis checks if it is written
+    well or not.
+
+
+# Static Analysis testing tools
++ Typescript
++ ESlint
++ Prettier
++ Husky
++ lint-staged
+
+
+# ESlint
+
++ A tool for identifying and reporting on patterns found in ECMAScript/JavaScript code,
+    with the goal of making code more consistent and avoiding bugs
++ CRA by default, installs ESlint into the project
+    and also adds ESlint for testing-library by default
++ we can also add eslint-plugin for jest-dom using npm install --D eslint-plugin-jest-dom
+    and then in package.json --> in extends array --> specify plugin:jest-dom/recommended
+
++ How to run ESlint with an npm script ?
+    with this, we can run one command & identify if there are errors in the project
+    + under package.json --> scripts --> eslint . , . refers to current folder
+
+
+# Prettier
+
++ An opinionated code formatter that ensures that all outputted code conforms to a consistent style
++ npm install --D --exact prettier --> to make sure that everyone in the project gets the exact same version of prettier
++ Add an npm script to format the files in our project
++ we can also specify our own formatting options & configuration in an external file (.prettierrc.json) at project root folder
+  other than package.json
++ Instead of running a script, it will be good if file is auto-formatted when changes are saved
+    Hence, install IDE extension of Prettier
+    update IDE user settings, (VScode --> enable format on save)
+
+*** When using both ESlint and Prettier , we need to turn off some ESlint rules that conflict prettier
+For this, we add another lint-plugin --> eslint-config-prettier
+
+
+# Husky
+
++ A way to make sure the code is automatically linted & formatted before someone commits that code
++ a tool that helps improve commits and more
++ 
+    1) Install Husky
+        npx husky-init && npm install
+        A pre-commit file is introduced & whenever we commit, these scripts are run
+        If any error is thrown, the commit is aborted
