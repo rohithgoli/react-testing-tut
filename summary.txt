@@ -1,0 +1,40 @@
+1. What is testing ?
+2. What is Jest and RTL ?
+3. Different types of tests
+4. What is a automated test ?
+5. CRA project
+6. Anatomy of a test
+7. First test
+8. Test driven development
+
+9. Jest watch MuiMode
+10. Filter tests
+11. Group tests
+12. Filename convention
+13. Code coverage
+14. Assertion
+
+15. Queries in RTL
+16. Types of Queries
+17. Priority order of Queries
+18. getBy vs queryBy vs findBy
+19. Manual Queries
+20. Debug tests
+21. Testing playground
+
+22. Testing user interactions
+23. Mouse interactions
+24. Keyboard interactions
+
+25. Providers
+26. Custom render function
+27. Custom react hooks
+
+28. Mocking functions with Jest
+29. Mocking HTTP requests with msw
+
+30. Static Analysis testing
+31. ESlint
+32. Prettier
+33. Husky
+34. lint-staged
